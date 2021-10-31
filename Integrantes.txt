@@ -11,3 +11,5 @@ Equipo de desarrollo
 Eleana Pinto
 Juan Carlos Muñoz
 Sara Sofia Hernández
+
+Nombre del equipo=Teams 6.
