@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:context=".DetalleIMC">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="Usuarios registrados!"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/txtDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/feedbackDocumento"/>
+
+    <TextView
+        android:id="@+id/txtNombreCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/feedbackname"/>
+    <TextView
+        android:id="@+id/txtEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/feedbackedad"/>
+    <TextView
+        android:id="@+id/txtPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/feedbackpeso"/>
+    <TextView
+        android:id="@+id/txtEstatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/feedbackestatura"/>
+
+    <TextView
+        android:id="@+id/txtIMC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="IMC:"/>
+    <TextView
+        android:id="@+id/txtRecomendaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Recomendaciones:"/>
+    <Button
+        android:id="@+id/bt_IrActividad1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="Volver"
+        android:textSize="14sp" />
+
+</LinearLayout>
