@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
@@ -18,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText edad;
     private EditText peso;
     private  EditText estatura;
+    private Spinner tipoUsuario;
+    private RadioGroup radioGroupo;
     private double IMC,estaturaDouble;
     private int pesoInt=0;
     private String recomendaciones="";
 
-
+    private String sexo="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         edad = (EditText)findViewById(R.id.txt_edad);
         peso = (EditText)findViewById(R.id.txt_peso);
         estatura = (EditText)findViewById(R.id.txt_estatura);
+        tipoUsuario = (Spinner) findViewById(R.id.sp_tipo_usuario);
+        radioGroupo = (RadioGroup) findViewById(R.id.opcionGenero);
 
 
 
@@ -74,6 +81,14 @@ public class MainActivity extends AppCompatActivity {
             pesoInt=Integer.parseInt(peso.getText().toString());
             estaturaDouble = Double.parseDouble(estatura.getText().toString());
 
+            if (radioGroupo.getCheckedRadioButtonId() == R.id.rb_m) {
+                sexo= "Masculino";
+                Toast.makeText(this, sexo, Toast.LENGTH_LONG).show();
+            }else{
+                sexo= "Femenino";
+                Toast.makeText(this, sexo, Toast.LENGTH_LONG).show();
+            }
+
             IMC=calcularIMC(pesoInt,estaturaDouble);
             recomendaciones=tipoRecomendaciones(IMC);
 
@@ -87,8 +102,10 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("dato3_edad", edad.getText().toString());
             intent.putExtra("dato4_peso", peso.getText().toString());
             intent.putExtra("dato4_estatura", estatura.getText().toString());
-            intent.putExtra("dato5_IMC", string_imc);
-            intent.putExtra("dato6_recomendacion", recomendaciones);
+            intent.putExtra("dato5_genero",sexo.toString());
+            intent.putExtra("dato6_tipoUsuario",tipoUsuario.getSelectedItem().toString());
+            intent.putExtra("dato7_IMC", string_imc);
+            intent.putExtra("dato8_recomendacion", recomendaciones);
             startActivity(intent);
             Toast.makeText(this, "Datos ingresados", Toast.LENGTH_SHORT).show();
             limpiarCampos();
@@ -103,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
         edad.setText("");
         peso.setText("");
         estatura.setText("");
+        radioGroupo.clearCheck();
+        tipoUsuario.setSelection(0);
+
     }
 
     //método para validar datos

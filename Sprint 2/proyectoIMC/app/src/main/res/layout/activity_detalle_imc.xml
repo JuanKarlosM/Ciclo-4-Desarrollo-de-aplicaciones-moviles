@@ -45,6 +45,18 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:text="@string/feedbackestatura"/>
+    <TextView
+        android:id="@+id/txtGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/feedbackGenero"/>
+    <TextView
+        android:id="@+id/txtTipoUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/feedbackTipoUsuario"/>
 
     <TextView
         android:id="@+id/txtIMC"

@@ -1,16 +1,27 @@
 <resources>
     <string name="app_name">Sprint 2 IMC</string>
-    <string name="feedbackTipoUsuario">Tipo de usuario</string>
+    <string name="feedbackTipoUsuario">Tipo de usuario:</string>
     <string name="feedbacktype1">Estudiante</string>
     <string name="feedbacktype2">Docente</string>
     <string name="feedbacktype3">Administrativo</string>
-    <string name="feedbackname">Nombre Completo</string>
-    <string name="feedbackDocumento">Documento de identidad</string>
-    <string name="feedbackedad">Edad</string>
-    <string name="feedbackpeso">Peso</string>
-    <string name="feedbackestatura">Estatura</string>
-    <string name="feedbackSexo">Sexo</string>
+    <string name="feedbackname">Nombre Completo:</string>
+    <string name="feedbackDocumento">Documento de identidad:</string>
+    <string name="feedbackedad">Edad:</string>
+    <string name="feedbackpeso">Peso:</string>
+    <string name="feedbackestatura">Estatura:</string>
+    <string name="feedbackGenero">Género:</string>
     <string name="feedbackFemenino">Femenino</string>
     <string name="feedbackMasculino">Masculino</string>
     <string name="feedbackIMC">Cálcular IMC</string>
+    <string-array name="lista">
+        <item>Estudiante</item>
+        <item>Docente</item>
+        <item>Administrativo</item>
+    </string-array>
+    <string-array name="feedbacktipousuario">
+        <item>@string/feedbacktype1</item>
+        <item>@string/feedbacktype2</item>
+        <item>@string/feedbacktype3</item>
+
+    </string-array>
 </resources>
